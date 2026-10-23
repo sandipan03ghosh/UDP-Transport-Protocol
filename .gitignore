@@ -1,0 +1,6 @@
+bin/
+lib/
+obj/
+received_file_*.txt
+*.o
+*.a
