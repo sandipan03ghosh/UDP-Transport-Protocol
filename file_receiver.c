@@ -55,8 +55,8 @@ int main(int argc, char *argv[]) {
             if (errno == ENOMESSAGE) {
                 usleep(100000);
                 /* only start the idle countdown once the transfer has begun */
-                if (got_data && ++idle > 50) {   /* ~5 s of silence */
-                    printf("No data for 5 seconds, assuming transfer complete\n");
+                if (got_data && ++idle > 150) {   /* ~15 s of silence */
+                    printf("No data for 15 seconds, assuming transfer complete\n");
                     break;
                 }
                 if (!got_data && ++idle > IDLE_LIMIT) {
